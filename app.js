@@ -8,7 +8,7 @@ const xss = require('xss-clean');
 const rateLimiter = require('express-rate-limit');
 
 app.get('/', (req, res)=>{
-    res.send('Alright job API')
+    res.send('Alright job API vision 1')
 } )
 
 const app = express();

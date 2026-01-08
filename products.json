@@ -1,0 +1,63 @@
+[
+    {
+        "name": "lunette",
+        "price": 30,
+        "featured": true,
+        "company": "ikea"
+    },
+    {
+        "name": "radio",
+        "price": 253,
+        "featured": true,
+        "company": "liddy"
+    },
+    {
+        "name": "phone",
+        "price": 15,
+        "featured": false,
+        "company": "caressa"
+    },
+    {
+        "name": "baladere",
+        "price": 114,
+        "featured": true,
+        "company": "ikea"
+    },
+    {
+        "name": "volan",
+        "price": 76,
+        "featured": false,
+        "company": "marcos"
+    },
+    {
+        "name": "pen",
+        "price": 30,
+        "featured": true,
+        "company": "ikea"
+    },
+    {
+        "name": "book",
+        "price": 83,
+        "featured": true,
+        "company": "liddy"
+    },
+    {
+        "name": "screen",
+        "price": 65,
+        "featured": false,
+        "company": "ikea"
+    },
+    {
+        "name": "voiture",
+        "price": 218,
+        "featured": true,
+        "company": "marcos"
+    },
+    {
+        "name": "backup",
+        "price": 53,
+        "featured": false,
+        "company": "caressa"
+    }
+]
+

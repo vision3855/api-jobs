@@ -15,3 +15,4 @@ userSchema.methods.create_JWT = function(next){
 }
 
 
+console.log('trials');

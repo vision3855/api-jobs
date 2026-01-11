@@ -7,11 +7,11 @@ const cors = require('cors');
 const xss = require('xss-clean');
 const rateLimiter = require('express-rate-limit');
 
+const app = express();
+
 app.get('/', (req, res)=>{
     res.send('Alright job API vision 1')
 } )
-
-const app = express();
 
 const authRouter = require('./routes/auth.route');
 const jobRouter = require('./routes/jobs.route');

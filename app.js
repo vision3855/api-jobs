@@ -4,7 +4,7 @@ const express = require('express');
 
 const helmet = require('helmet');
 const cors = require('cors');
-const xss = require('xss-clean');
+const xss = require('xss');
 const rateLimiter = require('express-rate-limit');
 
 const app = express();
@@ -31,10 +31,28 @@ app.use(express.json());
 
 app.use(helmet());
 app.use(cors());
-app.use(xss());
+const sanitize = obj => {
+  for (const key in obj) {
+    if (typeof obj[key] === 'string') {
+      obj[key] = xss(obj[key])
+    }
+  }
+}
+
+app.use((req, res, next) => {
+  sanitize(req.body)
+  sanitize(req.params)
+  sanitize(req.query)
+  next()
+})
 
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/jobs', authenticationMiddleware, jobRouter)
+
+app.use((err, req, res, next) => {
+  console.error(err.stack)
+  res.status(500).json({ error: err.message })
+})
 
 app.use(notFound)
 app.use(errorHandlerMiddleware)
